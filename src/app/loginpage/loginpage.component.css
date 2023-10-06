@@ -1,0 +1,181 @@
+/* Base styles for larger screens */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 70%), url(../../assets/photo4.jpg);
+    background-blur: 10px; /* Apply a blur effect to the background */
+    background-size: cover;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .login-container:hover {
+    background-color: rgba(0, 86, 179, 0.5); /* Change background color on hover with transparency */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
+  }
+  
+  /* Keyframes animation for shaking effect */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-5px, 0); }
+    40% { transform: translate(5px, 0); }
+    60% { transform: translate(-5px, 0); }
+    80% { transform: translate(5px, 0); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .login-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease; /* Add a transition for the transform property */
+    animation: none; /* Initially, no animation */
+  }
+  
+  .login-box:hover {
+    animation: shake 0.5s ease 1; /* Apply the shake animation once on hover */
+    transform: translate(0, 0); /* Reset transform to its original position */
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-box:focus {
+    outline: none; /* Remove focus outline */
+  }
+  
+  
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+ /* Base styles for input fields */
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for input fields */
+  backdrop-filter: blur(5px); /* Apply a slight blur effect to input fields */
+  margin-right: 20px;
+  font-size: 16px;
+  color: #333; /* Text color */
+}
+
+/* Styles for the error class */
+.error {
+  color: red; /* Red text color */
+   /* Red border */
+   font-size: larger;
+}
+
+
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media query for screens smaller than 768px (typical mobile screens) */
+  @media (max-width: 768px) {
+    .login-box {
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+   
+  
+    button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+  /* Base styles for the glow buttons */
+.glow-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px; /* Add some letter spacing for readability */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transition effect for hover */
+  
+    /* Glow effect using box-shadow */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Initial glow effect */
+  }
+  
+  /* Hover effect */
+  .glow-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); /* Increased glow effect on hover */
+  }
+  
+  /* Additional styles for the Signup button */
+  .glow-button[type="button"] {
+    background-color: #28a745; /* Different background color for the Signup button */
+  }
+  
+  .glow-button[type="button"]:hover {
+    background-color: #218838; /* Darker background color on hover for Signup button */
+  }
+/* Style for the professional heading */
+.professional-heading {
+    font-size: 24px; /* Adjust the font size to your preference */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px; /* Add some letter spacing for readability */
+    color: #6f21b8; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5); /* Glow effect using text-shadow */
+  }
+  
+  /* Hover effect for the heading */
+  .professional-heading:hover {
+    text-shadow: 3px 3px 6px rgba(0, 123, 255, 0.7); /* Increased glow effect on hover */
+  }
+/* Style for the professional labels */
+.professional-label {
+    font-weight: bold; /* Make the text bold */
+    color: #751515; /* Text color */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px; /* Add some letter spacing for readability */
+    text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.5); /* Glow effect using text-shadow */
+  }
+  
+  /* Hover effect for the labels */
+  .professional-label:hover {
+    text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.7); /* Increased glow effect on hover */
+  }
+
+  

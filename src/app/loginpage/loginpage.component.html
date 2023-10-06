@@ -1,0 +1,28 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2 class="professional-heading">Login</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="form-group">
+        <label class="professional-label" for="username">Username:</label>
+        <input type="text" id="username" name="username" formControlName="username" [ngClass]="{'error': loginButtonClicked && loginForm.get('username')?.hasError('required')}">
+        <div *ngIf="loginButtonClicked && loginForm.get('username')?.hasError('required')" class="error-message error">
+          Username is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="professional-label" for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password" [ngClass]="{'error': loginButtonClicked && loginForm.get('password')?.hasError('required')}">
+        <div *ngIf="loginButtonClicked && loginForm.get('password')?.hasError('required')" class="error-message error">
+          Password is required.
+        </div>
+      </div>
+      
+      <button class="glow-button" type="submit">Login</button>
+      <button class="glow-button" type="button">Signup</button>
+    </form>
+
+    <!-- Add the "Register" button here -->
+
+  </div>
+</div>
