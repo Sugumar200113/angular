@@ -13,7 +13,7 @@ export class LoginpageComponent {
   constructor(private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
-      password: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]], // Added Validators.minLength(8)
     });
   }
 

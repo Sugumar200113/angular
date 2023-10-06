@@ -16,6 +16,9 @@
         <div *ngIf="loginButtonClicked && loginForm.get('password')?.hasError('required')" class="error-message error">
           Password is required.
         </div>
+        <div *ngIf="loginForm.get('password')?.hasError('minlength')" class="error-message error">
+          Password must be at least 8 characters long.
+        </div>
       </div>
       
       <button class="glow-button" type="submit">Login</button>
