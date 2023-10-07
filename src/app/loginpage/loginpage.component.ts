@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginpageComponent {
   loginForm: FormGroup;
+  signupForm:FormGroup
   loginButtonClicked = false; // Track whether the login button is clicked
 
   constructor(private formBuilder: FormBuilder) {
@@ -15,6 +16,13 @@ export class LoginpageComponent {
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]], // Added Validators.minLength(8)
     });
+
+    this.signupForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      phonenumber: ['']
+    });
+    
   }
 
   login() {
@@ -24,4 +32,22 @@ export class LoginpageComponent {
       // Add your login logic here
     }
   }
+
+  showSignupModal() {
+    const modal = document.getElementById('signup-modal');
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }
+
+  // Function to hide the signup modal
+  hideSignupModal() {
+    const modal = document.getElementById('signup-modal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+
+
 }

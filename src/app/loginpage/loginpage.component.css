@@ -81,7 +81,7 @@ input[type="password"] {
 
 /* Styles for the error class */
 .error {
-  color: red; /* Red text color */
+  color: rgb(255, 0, 0); /* Red text color */
    /* Red border */
    font-size: larger;
 }
@@ -106,35 +106,21 @@ input[type="password"] {
   @media (max-width: 768px) {
     .login-box {
       width: 90%;
+      height: auto; /* Set height to 'auto' to maintain the aspect ratio */
+      padding-bottom: 20px; /* Add some bottom padding for spacing */
     }
   
     h2 {
       font-size: 24px;
     }
   
-   
-  
     button {
       font-size: 16px;
       padding: 8px 16px;
     }
   }
-  /* Base styles for the glow buttons */
-.glow-button {
-    background-color: #007bff; /* Button background color */
-    color: white; /* Text color */
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase; /* Make text uppercase */
-    letter-spacing: 1px; /* Add some letter spacing for readability */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transition effect for hover */
   
-    /* Glow effect using box-shadow */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Initial glow effect */
-  }
+ 
   
   /* Hover effect */
   .glow-button:hover {
@@ -156,7 +142,7 @@ input[type="password"] {
     font-weight: bold; /* Make the text bold */
     text-transform: uppercase; /* Make text uppercase */
     letter-spacing: 1px; /* Add some letter spacing for readability */
-    color: #6f21b8; /* Text color */
+    color: #8ff10f; /* Text color */
     text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5); /* Glow effect using text-shadow */
   }
   
@@ -167,7 +153,7 @@ input[type="password"] {
 /* Style for the professional labels */
 .professional-label {
     font-weight: bold; /* Make the text bold */
-    color: #751515; /* Text color */
+    color: #ffffff; /* Text color */
     text-transform: uppercase; /* Make text uppercase */
     letter-spacing: 1px; /* Add some letter spacing for readability */
     text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.5); /* Glow effect using text-shadow */
@@ -177,5 +163,89 @@ input[type="password"] {
   .professional-label:hover {
     text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.7); /* Increased glow effect on hover */
   }
+/* Add this CSS rule to move the "Forgot Password" link to the right */
+/* .right {
+margin-left: 90px;
+margin-top: 50px;
+} */
 
-  
+.glow-button1 {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase; /* Make text uppercase */
+  letter-spacing: 1px; /* Add some letter spacing for readability */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Transition effect for hover */
+margin-bottom: -90px;
+margin-right: 180px;
+  /* Glow effect using box-shadow */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Initial glow effect */
+}
+
+/* Hover effect */
+.glow-button:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); /* Increased glow effect on hover */
+}
+
+.div-parent{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.child1{
+  margin-left: 20px;
+}
+.child2{
+flex-direction: row;
+}
+.forlabel{
+  margin-left: 89px;
+  margin-top: 19px;
+}
+
+
+/* Style the "Forgot Password" link */
+.forgot-password-link {
+  text-decoration: none;
+  color: #00ffff; /* Link color (blue) */
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Add a hover effect with a glow and change link color on hover */
+.forgot-password-link:hover {
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.7); /* Glow effect on hover */
+  color: #b3007d; /* Darker blue color on hover */
+}
+/* Styling for the popup */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+ 
+}
+
+.modal-content {
+  background-color: #f11b1b;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}

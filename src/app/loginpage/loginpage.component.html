@@ -20,12 +20,48 @@
           Password must be at least 8 characters long.
         </div>
       </div>
+       
+     <div class="div-parent"> 
+      <div><button class="child1" type="submit">Login</button></div>
+      <div>
+        <button class="child2" type="button" (click)="showSignupModal()">Signup</button>
+      </div>
       
-      <button class="glow-button" type="submit">Login</button>
-      <button class="glow-button" type="button">Signup</button>
+    </div>
+    <div class="form-group forlabel">
+        <a class="forgot-password-link right" href="#">Forgot Password?</a>
+      </div>
     </form>
-
+   
+    
     <!-- Add the "Register" button here -->
 
+  </div>
+ 
+
+
+
+</div>
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" id="close-signup-modal">&times;</span>
+    <h2 class="professional-heading">Sign Up</h2>
+    <form [formGroup]="signupForm" >
+      <div class="form-group">
+        <label class="professional-label" for="email">Email:</label>
+        <input type="text" id="email" name="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label class="professional-label" for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="password">
+      </div>
+      <div class="form-group">
+        <label class="professional-label" for="phonenumber">Phone Number:</label>
+        <input type="text" id="phonenumber" name="phonenumber" formControlName="phonenumber">
+      </div>
+      <div class="div-parent">
+        <button class="child1" type="submit">Sign Up</button>
+      </div>
+    </form>
   </div>
 </div>
