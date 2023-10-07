@@ -47,6 +47,12 @@
     <span class="close-button" id="close-signup-modal">&times;</span>
     <h2 class="professional-heading">Sign Up</h2>
     <form [formGroup]="signupForm" >
+
+      <div class="form-group">
+        <label class="professional-label" for="name">Name:</label>
+        <input type="text" id="name" name="name" formControlName="name">
+      </div>
+
       <div class="form-group">
         <label class="professional-label" for="email">Email:</label>
         <input type="text" id="email" name="email" formControlName="email">
